@@ -5,32 +5,29 @@
 
 # Remember the rules:
 
-#     Rock beats scissors
-#     Scissors beats paper
-#     Paper beats rock
+# Rock beats scissors
+# Scissors beats paper
+# Paper beats rock
 
-game = "Y"
+game = "Yes"
 
-while game == "Y":
-    player1 = input("Player 1 lease choose your sign: ")
-    while (player1 != "S" and player1 != "R" and player1 != "P"):
-        player1 = input("Please choose your sign: ")
-
-    player2 = input("Player 2 please choose your sign: ")
-    while (player2 != "S" and player2 != "R" and player2 != "P"):
-        player2 = input("Please choose your sign: ")
-
-    if player1 == "S" and player2 == "P":
+while game == "Yes":
+    player1 = str(input("Player 1 choose: "))
+    while (player1 != "Scissors") or (player1 != "Paper") or (player1 != "Rock"):
+        player1 = str(input("Player 1 choose:"))
+    player2 = input("Player 2 choose:")
+    while player2 != "Scissors" or player2 != "Paper" or player2 != "Rock":
+        player2 = input("Player 2 choose:")
+    
+    if player1 == "Scissors" and player2 == "Paper":
         print("Player 1 wins")
-    elif player1 == "P" and player2 == "R":
+    elif player1 == "Paper" and player2 == "Rock":
         print("Player 1 wins")
-    elif player1 == "R" and player2 == "S":
-        print("Player 1 wins ")
-    elif player1 == player2:
+    elif player1 == "Rock" and player2 == "Scissors":
+        print("Player 1 wins")
+    elif player2 == player1:
         print("Draw")
     else:
         print("Player 2 wins")
 
-    game = input("Another game?: ")
-
-
+    game = input("Another game?")
