@@ -6,7 +6,6 @@
 # The article is long, so it is split up between 4 pages. 
 # Your task is to print out the text to the screen so that you can read the full article without having to click any buttons.
 
-from urllib import request
 from bs4 import BeautifulSoup
 import requests
 
